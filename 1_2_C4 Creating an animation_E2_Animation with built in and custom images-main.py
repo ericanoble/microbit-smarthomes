@@ -1,6 +1,7 @@
 # MicroPython Animation
 # https://microbit-micropython.readthedocs.io/en/latest/tutorials/images.html#images
-# This animation incorporates a built-in image of a heart and custom images with varying brightness so that when button a and b are pressed the heart fades
+# This animation incorporates a built-in image of a heart and custom images
+# with varying brightness so that when button a and b are pressed the heart fades
 from microbit import *
 while True:
     if button_a.is_pressed and button_b.is_pressed():
