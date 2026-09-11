@@ -1,57 +1,16 @@
-# All objects have a state and a behavior.
-
-# The state of the object "thermostat" can be defined by the following
-# characteristics: room name, temperature in degrees
-
-# The behaviour of the object "thermostat" can be definied by the following
-# actions or behaviours: e.g. show the temperature
-
-# A class is a definition of objects of the same kind
-# A class is like a template or blueprint that defines and describes the
-# characteristics (data) and behaviours (methods) of all objects of the same kind
-
-# Let's use the micro:bit to simulate the behaviour of thermostat display.
-
 from microbit import *
 
-# Step 1
-# Create a thermostat class where a thermostat will display the name of the room
-# and the temperature of that room in degrees
-
-    # The __init__ method is a special method in Python called a constructor.
-    # It is used to initialise the attributes of an object when it is created.
-    # The __init__ method is automatically called when a new object
-    # is created from a class. You don't call it yourself,
-    # Python runs it every time a new thermostat is made.
-    
-    # The __init__ method (like all methods) always takes the parameter self
-    # as its first argument.
-    # The parameter self refers to the object itself,
-    # allowing the method to access and modify its attributes.
-
-# Create a Themostat class (the blueprint/template).
-# Class names begin with a capital letter.
 class Thermostat:                       
-    # Step 2
-    # Define the Themostat class
-    def __init__(self, room, degrees):  # The constructor; initialises the attributes.
-        # 2a - Define the characteristics (data)
-            # every method has self as its first parameter then stores the value that
-            # was passed in as an attribute of this object as a variable.
+    def __init__(self, room, degrees):
         self.room = room                 
         self.degrees = degrees          
-    # 2b - Define the behaviours (methods)
-    def show_temperature(self):         # Defines a function
-        display.scroll(self.room)       # Displays (scrolls) the room name on the screen
-        display.scroll(self.degrees)    # Followed by the temperature of that room in degrees
+    def show_temperature(self):         
+        display.scroll(self.room)       
+        display.scroll(self.degrees)
 
-# Step 3
-# Create an object(s) of the Themostat class defined above
 living_room = Thermostat("Living room", 21)
 bathroom = Thermostat("Bathroom", 14)
 
-#Step 4
-# use micro:bit to simulate the display of the thermostat objects created above 
 while True:
     living_room.show_temperature()
     bathroom.show_temperature()
