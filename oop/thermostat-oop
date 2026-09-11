@@ -1,1 +1,14 @@
+from microbit import *
 
+# Write the class (Blueprint). No real objects yet.
+class Thermostat:                       # Starts the blueprint. Class names begin with a capital letter.
+    def __init__(self, room, degrees):  # The constructor. You don't call it yourself. Pythone runs it every time a new thermostat is made.
+        self.room = room                # Stores the value that was passed in as an attribute of this object.
+        self.degrees = degrees          # Every method has self as its first parameter
+    def show_temperature(self):         # Defines a function
+        display.scroll(self.degrees)    # Outputs the temperature of self in degrees to the screen
+
+# Make an object and use it
+living_room = Thermostat("Living room", 21)
+while True:
+    living_room.show_temperature()
