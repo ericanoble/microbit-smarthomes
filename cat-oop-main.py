@@ -68,19 +68,19 @@ my_cat = Cat("Whiskers", "Persian", 3, "Gray", "Healthy", 50, 6)
 # use micro:bit to simulate the behaviour of the my_cat object we created above
 while True:
     # Checks button input - both first, then each on its own
-    if button_a.is_pressed() and button_b.is_pressed():
+    if button_a.is_pressed() and button_b.is_pressed():           # pressing button a and button b the cat hurts
         my_cat.pain()
-    elif button_a.is_pressed():
+    elif button_a.is_pressed():                                   # by pressing button a the cat meows
         my_cat.meow()
-    elif button_b.is_pressed():
+    elif button_b.is_pressed():                                   # by pressing button b the cat purrs
         my_cat.purr()
 
     # Checks shake input - did this input happen since the last check?
-    if accelerometer.was_gesture('shake'):
+    if accelerometer.was_gesture('shake'):                        # shake the microbit and the cat will eat
         my_cat.eat()
 
     # Checks sound input - did this input happen since the last check?
-    if microphone.was_event(SoundEvent.LOUD):
+    if microphone.was_event(SoundEvent.LOUD):                     # speaking loudly on the microbit the cat was playing
         my_cat.play()
 
     # A short pause (0.1 seconds) gives time to press the second button before the next check
