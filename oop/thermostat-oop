@@ -4,7 +4,7 @@ class Thermostat:
     def __init__(self, room, degrees):
         self.room = room                 
         self.degrees = degrees          
-    def show_temperature(self):         
+    def scroll_temperature(self):         
         display.scroll(self.room)       
         display.scroll(self.degrees)
 
@@ -12,5 +12,5 @@ living_room = Thermostat("Living room", 21)
 bathroom = Thermostat("Bathroom", 14)
 
 while True:
-    living_room.show_temperature()
-    bathroom.show_temperature()
+    living_room.scroll_temperature()
+    bathroom.scroll_temperature()
