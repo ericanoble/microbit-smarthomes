@@ -10,7 +10,7 @@
 # A class is like a template or blueprint that defines and describes the
 # characteristics (data) and behaviours (methods) of all objects of the same kind
 
-# Let's use the micro:bit to simulate the behaviour of thermostat display.
+# Let's use the micro:bit to simulate the behaviour of a thermostat display.
 
 from microbit import *
 
